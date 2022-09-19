@@ -1,0 +1,189 @@
+++++++++++++++++++++++++++++++++++
+System reset
+MAR <- 0x0
+NEXT <- 0x0
+ENCODER <- 0x0
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - L0000: call L000B
+Cycle 0.0 - MPC:0x000, PC:0x0000, SP:0x8000, A:0x0000
+Next=0x0ff,imm=1,init,l_mar,l_pc,l_ir,ez_mem_adder,ey_pc,ew_imm,ex_mem_lo
+x_lo <- MEM[0x0] (0x84))
+TA_LO <- 0x0
+TA_HI <- 0x0
+TPC <- 0x0
+TSP <- 0x8000
+MAR <- 0x1
+PC <- 0x1
+IR <- 0x84
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 0.1 - MPC:0x184, PC:0x0001, SP:0x8000, A:0x0000
+Next=0x055,imm=1,l_mar,l_pc,l_ta_lo,ez_mem_adder,ey_pc,ew_imm,ex_mem_lo
+x_lo <- MEM[0x1] (0x08))
+TA_LO <- 0x8
+MAR <- 0x2
+PC <- 0x2
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 0.2 - MPC:0x055, PC:0x0002, SP:0x8000, A:0x0000
+Next=0x056,imm=1,l_mar,l_pc,l_ta_hi,ez_mem_adder,ey_pc,ew_imm,ex_mem_hi
+x_hi <- MEM[0x2] (0x00))
+TA_HI <- 0x0
+MAR <- 0x3
+PC <- 0x3
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 0.3 - MPC:0x056, PC:0x0003, SP:0x8000, A:0x0000
+Next=0x057,imm=65534,l_mar,l_sp,ez_mem_adder,ey_sp,ew_imm
+MAR <- 0x7ffe
+SP <- 0x7ffe
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 0.4 - MPC:0x057, PC:0x0003, SP:0x7ffe, A:0x0000
+Next=0x058,l_mem_lo,ez_mem_adder,ey_pc,ew_imm,ex_z_lo
+MEM[0x7ffe] <- 0x3
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 0.5 - MPC:0x058, PC:0x0003, SP:0x7ffe, A:0x0000
+Next=0x059,imm=1,l_mar,ez_mem_adder,ey_mar,ew_imm
+MAR <- 0x7fff
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 0.6 - MPC:0x059, PC:0x0003, SP:0x7ffe, A:0x0000
+Next=0x05a,l_mem_hi,ez_mem_adder,ey_pc,ew_imm,ex_z_hi
+MEM[0x7fff] <- 0x0
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 0.7 - MPC:0x05a, PC:0x0003, SP:0x7ffe, A:0x0000
+Next=0x000,l_mar,l_pc,ez_mem_adder,ey_pc,ew_ta
+MAR <- 0xb
+PC <- 0xb
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - L000B: enter 0xffffffe0
+Cycle 1.0 - MPC:0x000, PC:0x000b, SP:0x7ffe, A:0x0000
+Next=0x0ff,imm=1,init,l_mar,l_pc,l_ir,ez_mem_adder,ey_pc,ew_imm,ex_mem_lo
+x_lo <- MEM[0xb] (0x01))
+TA_LO <- 0x0
+TA_HI <- 0x0
+TPC <- 0xb
+TSP <- 0x7ffe
+MAR <- 0xc
+PC <- 0xc
+IR <- 0x1
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 1.1 - MPC:0x101, PC:0x000c, SP:0x7ffe, A:0x0000
+Next=0x081,imm=1,l_mar,l_pc,l_ta_lo,ez_mem_adder,ey_pc,ew_imm,ex_mem_lo
+x_lo <- MEM[0xc] (0xe0))
+TA_LO <- 0xe0
+MAR <- 0xd
+PC <- 0xd
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 1.2 - MPC:0x081, PC:0x000d, SP:0x7ffe, A:0x0000
+Next=0x07e,imm=1,l_mar,l_pc,l_ta_hi,ez_mem_adder,ey_pc,ew_imm,ex_mem_hi
+x_hi <- MEM[0xd] (0xff))
+TA_HI <- 0xff
+MAR <- 0xe
+PC <- 0xe
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 1.3 - MPC:0x07e, PC:0x000e, SP:0x7ffe, A:0x0000
+Next=0x07f,l_mar,ez_mem_adder,ey_sp,ew_ta
+MAR <- 0x7fde
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 1.4 - MPC:0x07f, PC:0x000e, SP:0x7ffe, A:0x0000
+Next=0x080,l_ta_lo,l_ta_hi,ez_mem_adder,ey_sp,ew_imm,ex_z_lo,ex_z_hi
+TA_LO <- 0xfe
+TA_HI <- 0x7f
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 1.5 - MPC:0x080, PC:0x000e, SP:0x7ffe, A:0x0000
+Next=0x021,imm=65534,l_mar,l_sp,ez_mem_adder,ey_mar,ew_imm
+MAR <- 0x7fdc
+SP <- 0x7fdc
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 1.6 - MPC:0x021, PC:0x000e, SP:0x7fdc, A:0x0000
+Next=0x022,imm=1,l_mar,l_mem_lo,ez_mem_adder,ey_mar,ew_imm,ex_ta_lo
+MAR <- 0x7fdd
+MEM[0x7fdc] <- 0xfe
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 1.7 - MPC:0x022, PC:0x000e, SP:0x7fdc, A:0x0000
+Next=0x000,l_mar,l_mem_hi,ez_mem_adder,ey_pc,ew_imm,ex_ta_hi
+MAR <- 0xe
+MEM[0x7fdd] <- 0x7f
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - L000E: pop SP
+Cycle 2.0 - MPC:0x000, PC:0x000e, SP:0x7fdc, A:0x0000
+Next=0x0ff,imm=1,init,l_mar,l_pc,l_ir,ez_mem_adder,ey_pc,ew_imm,ex_mem_lo
+x_lo <- MEM[0xe] (0xdd))
+TA_LO <- 0x0
+TA_HI <- 0x0
+TPC <- 0xe
+TSP <- 0x7fdc
+MAR <- 0xf
+PC <- 0xf
+IR <- 0xdd
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 2.1 - MPC:0x1dd, PC:0x000f, SP:0x7fdc, A:0x0000
+Next=0x0a3,l_mar,ez_mem_adder,ey_sp,ew_imm
+MAR <- 0x7fdc
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 2.2 - MPC:0x0a3, PC:0x000f, SP:0x7fdc, A:0x0000
+Next=0x0a4,imm=1,l_mar,l_sp,l_ta_lo,ez_mem_adder,ey_mar,ew_imm,ex_mem_lo
+x_lo <- MEM[0x7fdc] (0xfe))
+TA_LO <- 0xfe
+MAR <- 0x7fdd
+SP <- 0x7fdd
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 2.3 - MPC:0x0a4, PC:0x000f, SP:0x7fdd, A:0x0000
+Next=0x0a5,imm=1,l_mar,l_sp,l_ta_hi,ez_mem_adder,ey_mar,ew_imm,ex_mem_hi
+x_hi <- MEM[0x7fdd] (0x7f))
+TA_HI <- 0x7f
+MAR <- 0x7fde
+SP <- 0x7fde
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 2.4 - MPC:0x0a5, PC:0x000f, SP:0x7fde, A:0x0000
+Next=0x0a6,l_sp,ez_x,ex_ta_lo,ex_ta_hi
+SP <- 0x7ffe
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 2.5 - MPC:0x0a6, PC:0x000f, SP:0x7ffe, A:0x0000
+Next=0x000,l_mar,ez_mem_adder,ey_pc,ew_imm
+MAR <- 0xf
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - L000F: pop PC
+Cycle 3.0 - MPC:0x000, PC:0x000f, SP:0x7ffe, A:0x0000
+Next=0x0ff,imm=1,init,l_mar,l_pc,l_ir,ez_mem_adder,ey_pc,ew_imm,ex_mem_lo
+x_lo <- MEM[0xf] (0xde))
+TA_LO <- 0x0
+TA_HI <- 0x0
+TPC <- 0xf
+TSP <- 0x7ffe
+MAR <- 0x10
+PC <- 0x10
+IR <- 0xde
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 3.1 - MPC:0x1de, PC:0x0010, SP:0x7ffe, A:0x0000
+Next=0x02e,l_mar,ez_mem_adder,ey_sp,ew_imm
+MAR <- 0x7ffe
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 3.2 - MPC:0x02e, PC:0x0010, SP:0x7ffe, A:0x0000
+Next=0x02f,imm=1,l_mar,l_sp,l_ta_lo,ez_mem_adder,ey_mar,ew_imm,ex_mem_lo
+x_lo <- MEM[0x7ffe] (0x03))
+TA_LO <- 0x3
+MAR <- 0x7fff
+SP <- 0x7fff
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 3.3 - MPC:0x02f, PC:0x0010, SP:0x7fff, A:0x0000
+Next=0x030,imm=1,l_mar,l_sp,l_ta_hi,ez_mem_adder,ey_mar,ew_imm,ex_mem_hi
+x_hi <- MEM[0x7fff] (0x00))
+TA_HI <- 0x0
+MAR <- 0x8000
+SP <- 0x8000
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 3.4 - MPC:0x030, PC:0x0010, SP:0x8000, A:0x0000
+Next=0x000,l_mar,l_pc,ez_x,ex_ta_lo,ex_ta_hi
+MAR <- 0x3
+PC <- 0x3
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - L0003: halt
+Cycle 4.0 - MPC:0x000, PC:0x0003, SP:0x8000, A:0x0000
+Next=0x0ff,imm=1,init,l_mar,l_pc,l_ir,ez_mem_adder,ey_pc,ew_imm,ex_mem_lo
+x_lo <- MEM[0x3] (0x91))
+TA_LO <- 0x0
+TA_HI <- 0x0
+TPC <- 0x3
+TSP <- 0x8000
+MAR <- 0x4
+PC <- 0x4
+IR <- 0x91
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 4.1 - MPC:0x191, PC:0x0004, SP:0x8000, A:0x0000
+Next=0x001
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cycle 4.2 - MPC:0x001, PC:0x0004, SP:0x8000, A:0x0000
+Next=0x001,halt
