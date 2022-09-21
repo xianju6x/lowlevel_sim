@@ -1,3 +1,4 @@
+reset ==> call L000B ==> enter 0xffffffe0 ==> pop SP ==> pop PC ==> halt 
 ++++++++++++++++++++++++++++++++++
 System reset
 MAR <- 0x0
